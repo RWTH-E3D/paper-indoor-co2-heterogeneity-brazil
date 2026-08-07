@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 ## Minimalist example of model training code
 
-> Note: Since the original training Jupyter Notebooks contain raw data in the output that cannot be made public directly, we are providing only an equivalent minimalist example here. 
+> Note: Since the original training Jupyter Notebooks contain raw data in the output that cannot be made public directly, we are providing only an equivalent minimalist example here. The scripts and data can be provided upon request and after approval.
 
 ### Two-stage grid search
 
@@ -133,6 +133,12 @@ grid_search.fit(X_train, y_train)
 
 end_time = datetime.now()
 print("-> grid search done, total time used: ", end_time - start_time)
+
+C_best = grid_search.best_params_["C"]
+gamma_best = grid_search.best_params_["gamma"]
+
+best_param["svc_C"] = C_best
+best_param["svc_gamma"] = gamma_best
 ```
 
 3-fold expanding-window time-series CV for LSTM:
@@ -206,6 +212,8 @@ For ensemble model:
 
 ```python
 # ...
+loop = 250
+
 for random_seed in range(loop):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=random_seed)
     # ...
@@ -221,7 +229,7 @@ for random_seed in range(loop):
     # ...
 ```
 
-For LSTM:
+For LSTM, we wrote our own function that should be equivalent to the one provided by scikit-learn:
 
 ```python
 # permutation importance for LSTM
