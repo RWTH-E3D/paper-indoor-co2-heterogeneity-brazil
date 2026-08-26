@@ -2,7 +2,7 @@
 
 This repository contains the Python analysis scripts and the model performance results for the following paper:
 
-Investigating Indoor CO₂ Heterogeneity: The Impact of Vertical Stratification on IAQ Assessment and Presence Detection in Brazilian Educational Buildings
+Investigating Indoor CO₂ Heterogeneity: The Impact of Sensor Location on CO₂-based IAQ Classification and Presence Detection in Brazilian Educational Buildings
 
 # Repository Contents
 
@@ -31,7 +31,8 @@ Investigating Indoor CO₂ Heterogeneity: The Impact of Vertical Stratification 
 ├──── 1_analysis/                       # statistical analysis results
 │ ├──── building_L/
 │ │ ├─── analysis_sensor_position/      # single sensor scenario
-│ │ └─── analysis_vertical_difference/  # dual sensor scenario
+│ │ ├─── analysis_vertical_difference/  # dual sensor scenario
+│ │ └─── analysis_day_blocked_cv/       # additional analysis using day-blocked CV
 │ │
 │ └──── building_S/
 │   ├─── analysis_sensor_position/      # single sensor scenario
