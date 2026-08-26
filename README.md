@@ -14,9 +14,12 @@ Investigating Indoor CO₂ Heterogeneity: The Impact of Sensor Location on CO₂
 │ │ │ ├── _timeindep_results_raw/       # ensemble model
 │ │ │ └── _timeseries_results_raw/      # LSTM
 │ │ │
-│ │ └─── analysis_vertical_difference/  # dual sensor scenario
-│ │   ├── _timeindep_results_raw/       # ensemble model
-│ │   └── _timeseries_results_raw/      # LSTM
+│ │ ├─── analysis_vertical_difference/  # dual sensor scenario
+│ │ │ ├── _timeindep_results_raw/       # ensemble model
+│ │ │ └── _timeseries_results_raw/      # LSTM
+│ │ │
+│ │ └─── analysis_day_blocked_cv/       # additional analysis using day-blocked CV
+│ │   └── _timeindep_results_raw/       # ensemble model
 │ │
 │ └──── building_S/
 │   ├─── analysis_sensor_position/      # single sensor scenario
